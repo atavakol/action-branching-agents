@@ -1,0 +1,60 @@
+<mujoco model="reacher6dof">
+	<compiler angle="radian" inertiafromgeom="true"/>
+	<default>
+		<joint armature="1" damping="1" limited="true"/>
+		<geom contype="0" friction="1 0.1 0.1" rgba="0.7 0.7 0 1"/>
+	</default>
+	<option gravity="0 0 -9.81" integrator="RK4" timestep="0.01"/>
+	<worldbody>
+		<camera name="overhead" zaxis="0 0 -1" pos="0 0 0"/>
+		<!-- Arena -->
+		<geom conaffinity="0" contype="0" name="ground" pos="0 0 0" rgba="1. 1. 1. 1" size="1 1 10" type="plane"/>
+		<geom conaffinity="0" fromto="-.7 -.7 .01 .7 -.7 .01" name="sideS" rgba="0 0.25 0.5 1" size=".02" type="capsule"/>
+		<geom conaffinity="0" fromto=" .7 -.7 .01 .7  .7 .01" name="sideE" rgba="0 0.25 0.5 1" size=".02" type="capsule"/>
+		<geom conaffinity="0" fromto="-.7  .7 .01 .7  .7 .01" name="sideN" rgba="0 0.25 0.5 1" size=".02" type="capsule"/>
+		<geom conaffinity="0" fromto="-.7 -.7 .01 -.7 .7 .01" name="sideW" rgba="0 0.25 0.5 1" size=".02" type="capsule"/>
+		<!-- Arm -->
+		<geom conaffinity="0" contype="0" fromto="0 0 0 0 0 0.02" name="root" rgba="0.1796875 0.796875 0.44140625 1" size=".011" type="cylinder"/>
+		<body name="body0" pos="0 0 .01">
+			<geom fromto="0 0 0 0.1 0 0" name="link0" rgba="0.16015625 0.5 0.72265625 1" size=".01" type="capsule"/>
+			<joint axis="0 0 1" limited="false" name="joint0" pos="0 0 0" type="hinge"/>
+			<body name="body1" pos="0.1 0 0">
+				<joint axis="0 0 1" limited="true" name="joint1" pos="0 0 0" range="-0.8 0.8" type="hinge"/>
+				<geom fromto="0 0 0 0.1 0 0" name="link1" rgba="0.16015625 0.5 0.72265625 1" size=".01" type="capsule"/>
+				<body name="body2" pos="0.1 0 0">
+					<joint axis="0 0 1" limited="true" name="joint2" pos="0 0 0" range="-0.9 0.9" type="hinge"/>
+					<geom fromto="0 0 0 0.1 0 0" name="link2" rgba="0.16015625 0.5 0.72265625 1" size=".01" type="capsule"/>
+					<body name="body3" pos="0.1 0 0">
+						<joint axis="0 0 1" limited="true" name="joint3" pos="0 0 0" range="-1. 1." type="hinge"/>
+						<geom fromto="0 0 0 0.1 0 0" name="link3" rgba="0.16015625 0.5 0.72265625 1" size=".01" type="capsule"/>
+						<body name="body4" pos="0.1 0 0">
+							<joint axis="0 0 1" limited="true" name="joint4" pos="0 0 0" range="-1.2 1.2" type="hinge"/>
+							<geom fromto="0 0 0 0.1 0 0" name="link4" rgba="0.16015625 0.5 0.72265625 1" size=".01" type="capsule"/>
+							<body name="body5" pos="0.1 0 0">
+								<joint axis="0 0 1" limited="true" name="joint5" pos="0 0 0" range="-1.4 1.4" type="hinge"/>
+								<geom fromto="0 0 0 0.1 0 0" name="link5" rgba="0.16015625 0.5 0.72265625 1" size=".01" type="capsule"/>
+								<body name="fingertip" pos="0.11 0 0">
+									<geom contype="0" name="fingertip" pos="0 0 0" rgba="0.94140625 0.765625 0.05859375 1" size=".01" type="sphere"/>
+								</body>
+							</body>
+						</body>
+					</body>
+				</body>
+			</body>
+		</body>
+		<!-- Target -->
+		<body name="target" pos=".1 -.1 .01">
+			<joint armature="0" axis="1 0 0" damping="0" limited="true" name="target_x" pos="0 0 0" range="-.67 .67" ref=".1" stiffness="0" type="slide"/> 
+			<joint armature="0" axis="0 1 0" damping="0" limited="true" name="target_y" pos="0 0 0" range="-.67 .67" ref="-.1" stiffness="0" type="slide"/>
+			<geom conaffinity="0" contype="0" name="target" pos="0 0 0" rgba="1. 0.4 0. 1" size=".02" type="sphere"/>
+		</body>
+	</worldbody>
+	<actuator>
+		<motor ctrllimited="true" ctrlrange="-.5 .5" gear="200.0" joint="joint0"/>
+		<motor ctrllimited="true" ctrlrange="-.5 .5" gear="200.0" joint="joint1"/>
+		<motor ctrllimited="true" ctrlrange="-.5 .5" gear="200.0" joint="joint2"/>
+		<motor ctrllimited="true" ctrlrange="-.5 .5" gear="200.0" joint="joint3"/>
+		<motor ctrllimited="true" ctrlrange="-.5 .5" gear="200.0" joint="joint4"/>
+		<motor ctrllimited="true" ctrlrange="-.5 .5" gear="200.0" joint="joint5"/>
+	</actuator>
+</mujoco>
