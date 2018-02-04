@@ -28,7 +28,7 @@ model_file_name = 'Branching_Dueling-reduceLocalMean_TD-target-mean_TD-errors-ag
 # Hopper-v1:
 #model_file_name = 'Branching_Dueling-reduceLocalMean_TD-target-mean_TD-errors-aggregation-v2_granularity-33_2018-02-01_11-02-56_Hopper-v1.pkl' 
 # Walker-v1:
-#model_file_name = 'Branching_Dueling-reduceLocalMean_TD-target-mean_TD-errors-aggregation-v2_granularity-33_2018-01-27_13-07-55_Walker2d-v1.pkl' 
+#model_file_name = 'Branching_Dueling-reduceLocalMean_TD-target-mean_TD-errors-aggregation-v2_granularity-33_2018-02-01_13-08-52_Walker2d-v1.pkl' 
 # Humanoid-v1:
 #model_file_name = 'Branching_Dueling-reduceLocalMean_TD-target-mean_TD-errors-aggregation-v2_granularity-33_2018-01-29_11-52-42_Humanoid-v1.pkl' 
 
