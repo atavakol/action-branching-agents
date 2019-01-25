@@ -59,13 +59,14 @@ The current implementation keeps track of the model with the highest average sco
 
 ## Citation
 
-If you use this work, please use the following citation:
+If you use this work, we ask that you use the following BibTeX entry:
 
 ```
 @inproceedings{tavakoli2018branching,
   title={Action Branching Architectures for Deep Reinforcement Learning},
   author={Tavakoli, Arash and Pardo, Fabio and Kormushev, Petar},
-  booktitle={AAAI},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  pages = {4131--4138},
   year={2018}
 }
 ```

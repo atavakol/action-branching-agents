@@ -3,7 +3,7 @@
 
 ## Overview
 
-Action Branching Agents provides a set of deep reinforcement learning agents based on the incorporation of the [action branching architecture](https://arxiv.org/abs/1711.08946) into the existing reinforcement learning algorithms. 
+Action Branching Agents repository provides a set of deep reinforcement learning agents based on the incorporation of the [action branching architecture](https://arxiv.org/abs/1711.08946) into the existing reinforcement learning algorithms. 
 
 <img src="data/action_branching_architecture.png" alt="Action Branching Architecture" width=100% align="center"/>
 
@@ -49,13 +49,14 @@ Alternatively, you can evaluate a pre-trained model included in the agent's ```t
 
 ## Citation
 
-If you use this work, please use the following citation:
+If you use this work, we ask that you use the following BibTeX entry:
 
 ```
 @inproceedings{tavakoli2018branching,
   title={Action Branching Architectures for Deep Reinforcement Learning},
   author={Tavakoli, Arash and Pardo, Fabio and Kormushev, Petar},
-  booktitle={AAAI},
+  booktitle={AAAI Conference on Artificial Intelligence},
+  pages = {4131--4138},
   year={2018}
 }
 ```
