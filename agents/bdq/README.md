@@ -8,7 +8,7 @@ Branching Dueling Q-Network (BDQ) is a novel agent which is based on the incorpo
 
 As we show in the [paper](https://arxiv.org/abs/1711.08946), BDQ is able to solve numerous continuous control domains via discretization of the action space. Most remarkably, we have shown that BDQ is able to perform well on the Humanoid-v1 domain with a total of 6.5 x 10<sup>25</sup> discrete actions.     
 
-The code for BDQ is based on the implementation of the DQN agent as part of the initial release of the OpenAI Baselines. However, it does not require installation of the Baselines as we have made it into a free-standing codebase with relative path imports.
+Our TensorFlow code for BDQ is based on the implementation of the DQN agent as part of the initial release of the OpenAI Baselines. However, it does not require installation of the Baselines as we have made it into a free-standing codebase with relative path imports.
 
 <p align="center">
 <img src="../../data/BDQ_Reacher3DOF-v0.gif" alt="Reacher3DOF-v0" width=24%/> 
@@ -31,12 +31,12 @@ You can clone this repository by:
 git clone https://github.com/atavakol/action-branching-agents.git
 ``` 
 
-To train a model or to evaluate a saved, pre-trained model, change directory to the agent's main directory to run the [train_continuous.py](train_continuous.py) script (required due to relative paths).
+To train a new model or evaluate a pre-trained one, change directory to the agent's main directory to run the corresponding scripts (required due to using relative paths).
 
 
 ### Train 
 
-You can readily train a new model for any continuous control domain from the OpenAI Gym collection, or the custom reaching domains provided in this repository, by running the [train_continuous.py](train_continuous.py) script from the agent's main directory. 
+You can readily train a new model for any continuous control domain from the OpenAI Gym collection or the custom reaching domains provided in this repository, by running the [train_continuous.py](train_continuous.py) script from the agent's main directory. 
 
 ```bash
 cd action-branching-agents/agents/bdq
@@ -46,12 +46,12 @@ python train_continuous.py
 
 ### Evaluate 
 
-Alternatively, you can evaluate a pre-trained model included in the agent's `trained_models` directory, by running the [enjoy_continuous.py](enjoy_continuous.py) script from the agent's main directory. By default, evaluation is run using a greedy policy.
+Alternatively, you can evaluate a pre-trained model saved in the agent's `trained_models` directory, by running the [enjoy_continuous.py](enjoy_continuous.py) script from the agent's main directory. By default, evaluation is run using a greedy policy.
 
 
 #### Provided pre-trained models
 
-Currently, a set of pre-trained models are provided, in the agent's `trained_models` directory, for the following domains: 
+Currently, a set of pre-trained models are provided in the agent's `trained_models` directory for the following domains: 
 
 * MuJoCo (custom): `Reacher3DOF-v0`, `Reacher4DOF-v0`, `Reacher5DOF-v0`, `Reacher6DOF-v0`
 * MuJoCo (standard): `Reacher-v1`, `Hopper-v1`, `Walker2d-v1`, `Humanoid-v1`  
