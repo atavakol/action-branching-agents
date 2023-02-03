@@ -4,7 +4,7 @@
 Action Branching Agents repository provides a set of deep reinforcement learning agents based on the incorporation of the [action branching architecture](https://arxiv.org/abs/1711.08946) into the existing reinforcement learning algorithms. 
 
 <p align="center">
-  <img src="data/action_branching_architecture.png" alt="Action Branching Architecture" width=80%">
+  <img src="data/action_branching_architecture.png" alt="Action Branching Architecture" width="80%">
 </p>
 
 
@@ -18,7 +18,7 @@ Discrete-action algorithms have been central to numerous recent successes of dee
 * Branching Dueling Q-Network (BDQ) ([code](agents/bdq), [paper](https://arxiv.org/abs/1711.08946))
 
 <p align="center">
-  <img src="data/bdq_network.png" alt="BDQ Network" width=80%">
+  <img src="data/bdq_network.png" alt="BDQ Network" width="80%">
 </p>
 
 Branching Dueling Q-Network (BDQ) is a novel agent which is based on the incorporation of the proposed [action branching architecture](https://arxiv.org/abs/1711.08946) into the [Deep Q-Network (DQN)](https://www.nature.com/articles/nature14236) algorithm, as well as adapting a selection of its extensions, [Double Q-Learning](https://arxiv.org/abs/1509.06461), [Dueling Network Architectures](https://arxiv.org/abs/1511.06581), and [Prioritized Experience Replay](https://arxiv.org/abs/1511.05952). 
@@ -26,13 +26,13 @@ Branching Dueling Q-Network (BDQ) is a novel agent which is based on the incorpo
 As we show in the [paper](https://arxiv.org/abs/1711.08946), BDQ is able to solve numerous continuous control domains via discretization of the action space. Most remarkably, we have shown that BDQ is able to perform well on the Humanoid-v1 domain with a total of 6.5 x 10<sup>25</sup> discrete actions.     
 
 <p align="center">
-<img src="data/BDQ_Reacher3DOF-v0.gif" alt="Reacher3DOF-v0" width=24%/> <img src="data/BDQ_Reacher4DOF-v0.gif" alt="Reacher4DOF-v0" width=24%/> 
-<img src="data/BDQ_Reacher5DOF-v0.gif" alt="Reacher5DOF-v0" width=24%/> <img src="data/BDQ_Reacher6DOF-v0.gif" alt="Reacher6DOF-v0" width=24%/>
+<img src="data/BDQ_Reacher3DOF-v0.gif" alt="Reacher3DOF-v0" width="20%"> <img src="data/BDQ_Reacher4DOF-v0.gif" alt="Reacher4DOF-v0" width="20%"> 
+<img src="data/BDQ_Reacher5DOF-v0.gif" alt="Reacher5DOF-v0" width="20%"> <img src="data/BDQ_Reacher6DOF-v0.gif" alt="Reacher6DOF-v0" width="20%">
 <br>
-<img src="data/BDQ_Reacher-v1.gif" alt="Reacher-v1" width=24%/> 
-<img src="data/BDQ_Hopper-v1.gif" alt="Hopper-v1" width=24%/> 
-<img src="data/BDQ_Walker2d-v1.gif" alt="Walker2d-v1" width=24%/> 
-<img src="data/BDQ_Humanoid-v1.gif" alt="Humanoid-v1" width=24%/>
+<img src="data/BDQ_Reacher-v1.gif" alt="Reacher-v1" width="20%"> 
+<img src="data/BDQ_Hopper-v1.gif" alt="Hopper-v1" width="20%"> 
+<img src="data/BDQ_Walker2d-v1.gif" alt="Walker2d-v1" width="20%"> 
+<img src="data/BDQ_Humanoid-v1.gif" alt="Humanoid-v1" width="20%">
 </p>
 
 
